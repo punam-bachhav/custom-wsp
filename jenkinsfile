@@ -1,0 +1,19 @@
+
+pipeline {
+        agent{
+		    label{
+			   
+			   label "qa"
+			     customworkspace "/mnt/project"
+				 }
+				}
+              stages {
+                  stage ('mkdir') {
+                        steps {
+                          sh "rm -rf *"
+                          sh "mkdir jenkins-directory"
+                        }
+                      }
+                   }
+               }				   
+			
